@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Show</title>
+</head>
+<body>
+    
+    <form action="/create" method="POST">
+        {% csrf_token %}
+
+        <h1 style= "margin: 10px">Add a New Show</h1>
+        <div class="row">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" name="title">
+        </div>
+        
+        <div style= "margin: 10px" class="row">
+            <label for="network" class="form-label">Network</label>
+            <input type="text" class="form-control" name="network">
+        </div>
+        
+        <div style= "margin: 10px" class="row">
+            <label for="date" class="form-label">Release Date</label>
+            <input type="date" class="form-control" name="date
+        </div>
+        
+        <div style= "margin: 10px" class="row">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" name="description"></textarea>
+        </div>
+        <button style= "margin: 10px; color:white; background-color: black;">Add!</button>
+    </form>
+</body>
+</html>

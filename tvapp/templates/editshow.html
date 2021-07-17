@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <h1>Edit {{the_show.title}}</h1>
+    <form action="/shows/{{the_show.id}}/update" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name='show' value='{{the_show.id}}'>
+    <label for="title" class="form-label">Title:</label>
+    <input type="text" class="form-control" name="title" value="{{the_show.title}}">
+    <label for="network" class="form-label">Network:</label>
+    <input type="text" class="form-control" name="network" value="{{the_show.network}}">
+    <label for="date" class="form-label">Release Date:</label>
+    <input type="date"  class="form-control" name="date" value="{{the_show.date}}">
+    <label for="description" class="form-label">Description:</label>
+    <input type="text" class="form-control" name="description" value="{{the_show.description}}">
+    <input type="submit">
+    </form>
+</body>
+</html>

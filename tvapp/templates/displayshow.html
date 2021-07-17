@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{anyshow.title}}</title>
+</head>
+<body>
+    <div class="showit">
+        <h1>{{displayshow.title}}</h1>
+        <p>Network: {{displayshow.network}}</p>
+        <p>Release Date: {{displayshow.date}}</p>
+        <p>Description: {{displayshow.description}}</p>
+        <p>Last Updated: {{displayshow.updated_at}}</p>
+        <p><a href="/shows/{{displayshow.id}}/edit">Edit</a> | <a href="/shows/{{displayshow.id}}/destroy">Delete</a></p>
+        <p><a href="/">Go Back</a></p>
+    </div>
+</body>
+</html>
